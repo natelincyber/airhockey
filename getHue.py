@@ -52,7 +52,7 @@ def thresholding(h, s, v, hM, sM, vM):
         for contour in contours:
             area = cv2.contourArea(contour)
             # TODO mess with area given the distance from the table to the puck
-            if area > 5000:
+            if area > 3000:
                 cv2.drawContours(image, contour, -1, (0,255,0))
                 rect = cv2.boundingRect(contour)
                 x,y,w,h = rect
